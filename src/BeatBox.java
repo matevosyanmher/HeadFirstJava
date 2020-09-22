@@ -3,9 +3,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class BeatBox {
+public class BeatBox implements Serializable {
     JPanel mainPanel;
     ArrayList<JCheckBox> checkboxList;
     JCheckBox c;
@@ -132,9 +133,9 @@ public class BeatBox {
         public void actionPerformed(ActionEvent a) {
             sequencer.stop();
 
-            for (JCheckBox s : checkboxList) {
-                s.setSelected(false);
-            }
+//            for (JCheckBox s : checkboxList) {
+//                s.setSelected(false);
+//            }
         }
     } // close inner class
 
